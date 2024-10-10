@@ -91,7 +91,7 @@ function AboutSalary({click}) {
     
     
   return (
-   <div className='p-3 p-md-5 about-salary' id='fullstack'>
+   <div className='p-3 p-md-5 about-salary container-fluid' id='fullstack'>
   
 
     <div className="d-flex flex-column align-items-center justify-content-center w-100 text-center">

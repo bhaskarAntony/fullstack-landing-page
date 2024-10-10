@@ -50,16 +50,16 @@ function HeroCarousel({click}) {
   return (
   <section id="courses">
       <Carousel>
-      <Carousel.Item interval={1000}>
+      <Carousel.Item interval={5000}>
             <Hero data={FullstackData} click={click}/>
       </Carousel.Item>
-      <Carousel.Item interval={1000} >
+      <Carousel.Item interval={5000} >
       <Hero data={MernstackData}  click={click}/>
       </Carousel.Item>
-      <Carousel.Item  interval={1000}>
+      <Carousel.Item  interval={5000}>
       <Hero data={javastackData}  click={click}/>
       </Carousel.Item>
-      <Carousel.Item  interval={1000}>
+      <Carousel.Item  interval={5000}>
       <Hero data={PythonstackData}  click={click}/>
       </Carousel.Item>
     </Carousel>

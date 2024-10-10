@@ -12,6 +12,7 @@ import TestimonialSlider from '../../components/testimonials/TestimonialSlider'
 import Why from '../../components/why/Why'
 import Scroll from '../../components/scroll/Scroll'
 import { usePopup } from '../../context/PopupContext'
+import Footer from '../../components/footer/Footer'
 
 function Home() {
   const { openPopup } = usePopup();
@@ -49,6 +50,7 @@ function Home() {
         <Companies click={handleClick}/>
        
         {/* <Projects/> */}
+        <Footer/>
     </Fragment>
   )
 }
