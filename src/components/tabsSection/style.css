@@ -1,0 +1,25 @@
+.designation-list{
+    list-style-position: inside !important;
+    padding: 0 !important;
+    margin-top: 20px;
+    list-style-image: url('../../images/dot.png');
+    position: relative;
+}
+.designation-list::before{
+    content: "";
+    width: 2px;
+    height: 100%;
+    /* background-color: #54b435; */
+    border-radius: 10px;
+    position: absolute;
+    left: 17px;
+}
+.designation-list li{
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    background-color: #bcacff2a;
+    border-radius: 100px;
+    font-weight: 600;
+}

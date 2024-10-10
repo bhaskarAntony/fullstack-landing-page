@@ -1,0 +1,99 @@
+.testimonial-slider {
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.testimonial-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.testimonial-card {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    width: 250px; /* Set the width of each card */
+    min-height: 150px; /* Set height for cards */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    
+    scroll-snap-align: center; /* Center align cards in the viewport */
+   
+}
+
+.play-icon {
+    font-size: 40px;
+    color: #007bff;
+    cursor: pointer;
+ 
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-player {
+    width: 100%;
+    max-width: 600px; /* Limit video width */
+    height: 300px; /* Set height for video */
+    border-radius: 8px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    margin: 0 10px;
+}
+
+.tg-btn{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #fff;
+}
+.tg-btn:active{
+    transform: scale(0.9);
+}
+.testimonial-container::-webkit-scrollbar{
+    display: none !important;
+}
+.play-video{
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: #fff;
+}
+.testimonial-card img{
+    width: 80px;
+    border-radius: 100px;
+    border: 7px solid var(--primary-color);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}

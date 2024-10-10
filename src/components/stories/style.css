@@ -1,0 +1,19 @@
+.stories{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    overflow: auto;
+}
+.story{
+    padding: 3px;
+    background: linear-gradient(45deg, #fa2666, #7118c3, #3b2ef6);
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+}
+.story video{
+    width: 68px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 100px;
+}

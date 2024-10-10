@@ -1,0 +1,4 @@
+.carousel-inner, .carousel-item{
+    min-height: 80vh !important;
+    color: #000 !important;
+}

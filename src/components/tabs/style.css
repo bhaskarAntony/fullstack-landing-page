@@ -1,0 +1,25 @@
+.nav-tabs{
+    width: 100%;
+    border-bottom: 1px solid #ccc !important;
+    flex-wrap: nowrap !important;
+    overflow: auto;
+    
+}
+.nav-item{
+    
+}
+.nav-item .nav-link{
+    border: none !important;
+    color: #0c0c0c;
+    font-weight: 600;
+    text-wrap: nowrap !important;
+    overflow: auto;
+   
+}
+.about-salary .nav-item .active{
+    border-bottom: 3px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+.nav-item:hover .nav-link{
+    color: var(--primary-color) !important;
+}

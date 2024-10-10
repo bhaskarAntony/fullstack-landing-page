@@ -1,0 +1,42 @@
+.hero{
+    min-height: 90vh;
+}
+.hero{
+    background: url('../../images/circle-scatter-haikei.svg') no-repeat center;
+    background-color: #f6f7fd;
+    background-size: cover;
+}
+.route{
+    list-style-position: inside;
+    position: relative;
+    padding: 0;
+    list-style-image: url('../../images/dot.png') !important;
+}
+.route li{
+    position: relative;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.route::before{
+    content: "";
+    width: 1.5px;
+    height: 100%;
+    background-color: rgb(116, 211, 116);
+    position: absolute;
+    left: 7px;
+}
+.points{
+    list-style: url('../../images/check.png') inside;
+    padding: 0;
+    margin-top: 20px;
+    /* list-style-type: none !important; */
+}
+
+@media(max-width:576px){
+    .hero{
+        background: url('../../images/hero-mobile.svg') no-repeat center;
+        background-size: cover;
+        background-color: #f6f7fd;
+    }
+}

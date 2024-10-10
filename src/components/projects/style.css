@@ -1,0 +1,22 @@
+.project-card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.tech-btn{
+    border: none;
+    padding: 10px;
+    background: var(--primary-color);
+    color: #fff;
+}
+.projects .carousel-indicators,.carousel-control-prev, .carousel-control-next{
+    display: none;
+}
+
+.carousel-indicators button{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100px !important;
+    background-color: gray !important;
+}
+.carousel-indicators .active{
+    background-color: var(--primary-color) !important;
+}

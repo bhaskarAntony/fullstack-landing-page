@@ -1,0 +1,17 @@
+header{
+    z-index: 100;
+}
+.offcanvas-nav{
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0px;
+}
+.offcanvas-nav li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.offcanvas-nav li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #0c0c0c;
+}

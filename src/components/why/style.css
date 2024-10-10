@@ -1,0 +1,17 @@
+.why-card i{
+    width: 60px;
+    height: 60px;
+    background-color:#fff ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color)!important;
+    border-radius: 100px;
+    padding: 10px;
+}
+.why-card:nth-child(odd){
+    background-color: var(--primary-color);
+}
+.why-card:nth-child(even){
+    background-color: #fff;
+}

@@ -1,0 +1,7 @@
+.apply-form{
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.apply-form .form-control, .apply-form .form-select{
+    background-color: rgb(241, 241, 241);
+}
