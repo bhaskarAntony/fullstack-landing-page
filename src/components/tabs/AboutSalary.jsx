@@ -97,7 +97,7 @@ function AboutSalary({click}) {
     <div className="d-flex flex-column align-items-center justify-content-center w-100 text-center">
             <h1 className='fs-4'>Why Full Stack Masters Program ?</h1>
             <div className="v-line"></div>
-            <div className="icon mb-3"><i class="bi bi-building-check text-light"></i></div>
+            <div className="icon mb-3"><i class="bi bi-ui-checks-grid text-light"></i></div>
             <h1 className="fs-3 fw-bold text-main">Demand on Fullstack</h1>
         </div>
      <Tabs

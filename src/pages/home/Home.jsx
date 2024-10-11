@@ -16,6 +16,7 @@ import Footer from '../../components/footer/Footer'
 import Faqs from '../../components/faqs/Faqs'
 import Number from '../../components/numbers/Number'
 import Languages from '../../components/languages/Languages'
+import './style.css'
 
 function Home() {
   const { openPopup } = usePopup();
@@ -56,8 +57,46 @@ function Home() {
           <h1 className='text-white fs-2 fw-bold my-4'>At <u className='text-warning'>Be Practical</u> Tech Solutions “<span className="text-warning">We are the creators of coding legends</span>”</h1>
           <button className="btn btn-light px-5 rounded-1 p-3 fs-5 fw-bold text-main" onClick={handleClick}>Ask More Doubts</button>
         </section>
-        <Companies click={handleClick}/>
+        <Companies click={handleClick}/>,
         <Faqs click={handleClick}/>
+        <section className="container-fluid">
+        <div className="d-flex flex-column align-items-center justify-content-center w-100 text-center">
+            <h1 className='fs-4'>For More Enquiry Contact us</h1>
+            <div className="v-line"></div>
+            <div className="icon mb-3"><i class="bi bi-person-lines-fill text-light"></i></div>
+            <h1 className="fs-3 fw-bold text-main">Contact Details</h1>
+        </div>
+          <div className="row">
+            <div className="col-md-5">
+              <img src="https://cdn.dribbble.com/users/1107512/screenshots/3997677/_g.gif" alt="contact-us" className="w-100" />
+            </div>
+            <div className="col-md-7 mt-3">
+                <div className="contact-card p-3 d-flex align-items-center gap-3">
+                <i class="bi bi-envelope-fill fs-2 text-main"></i>
+                     <div>
+                     <h5 className="fs-5 text-main">Email</h5>
+                     <p className="fs-6">info@be-practicle.com</p>
+                     </div>
+                </div>
+
+                <div className="contact-card p-3 d-flex align-items-center gap-3">
+                <i class="bi bi-telephone-outbound-fill fs-2 text-main"></i>
+                     <div>
+                     <h5 className="fs-5 text-main">Phone</h5>
+                     <p className="fs-6">+91-9242079119</p>
+                     </div>
+                </div>
+
+                <div className="contact-card p-3 d-flex align-items-center gap-3">
+                <i class="bi bi-geo-alt-fill fs-2 text-main"></i>
+                     <div>
+                     <h5 className="fs-5 text-main">Location</h5>
+                     <p className="fs-6">#737C,1stFloor,1st cross 3rd Stage,4th Block Basaveshwara nagar Bengaluru-560079</p>
+                     </div>
+                </div>
+            </div>
+          </div>
+        </section>
        
         {/* <Projects/> */}
         <Footer/>

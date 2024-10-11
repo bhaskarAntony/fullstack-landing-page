@@ -30,7 +30,7 @@ function Why({click}) {
               <div className="d-flex flex-column align-items-center justify-content-center w-100 text-center">
             <h1 className='fs-4'>Why Choose Be Practical?</h1>
             <div className="v-line"></div>
-            <div className="icon mb-3"><i class="bi bi-building-check text-light"></i></div>
+            <div className="icon mb-3"><i class="bi bi-check-circle text-light"></i></div>
             <h1 className="fs-3 fw-bold text-main">Benefits Of Be Practical</h1>
         </div>
             <div className="row mt-4">

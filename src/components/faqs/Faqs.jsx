@@ -25,10 +25,10 @@ function Faqs({click}) {
              <div className="d-flex flex-column align-items-center justify-content-center w-100 text-center">
             <h1 className='fs-4'>Frequently Asked Questions</h1>
             <div className="v-line"></div>
-            <div className="icon mb-3"><i class="bi bi-building-check text-light"></i></div>
+            <div className="icon mb-3"><i class="bi bi-question-circle text-light"></i></div>
             <h1 className="fs-3 fw-bold text-main">FAQ's</h1>
         </div>
-           <div className="row">
+           <div className="row align-items-center">
             <div className="col-md-6">
             <img src="https://cdni.iconscout.com/illustration/premium/thumb/web-development-illustration-download-in-svg-png-gif-file-formats--html-logo-touch-technology-laptop-software-pack-seo-illustrations-2918522.png?f=webp" alt="image" className="w-100" />
             </div>

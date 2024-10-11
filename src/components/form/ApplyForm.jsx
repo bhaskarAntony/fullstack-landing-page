@@ -1,50 +1,131 @@
-import React, { Fragment } from 'react'
-import './style.css'
+import React, { Fragment, useState } from 'react';
+import axios from 'axios';
+import { Modal, Button } from 'react-bootstrap';
+import './style.css';
 
 function ApplyForm() {
+  const [formData, setFormData] = useState({
+    fullname: '',
+    email: '',
+    phonenumber: '',
+    experience: 'student',
+    course: 'mern'
+  });
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Submitting form with data:", formData); // Log the form data
+    try {
+      const response = await axios.post('http://localhost:5000/api/new/lead', formData);
+      console.log('Response:', response.data);
+      setShowModal(true);
+    } catch (error) {
+      console.error('Error submitting form:', error); // Log the error for better debugging
+    }
+  };
+  
+
+  const handleClose = () => setShowModal(false);
+
   return (
     <Fragment>
-        <div className="apply-form p-3">
-            <h1 className="fs-4 mb-3 fw-bold">Apply For Free Counselling</h1>
-            <div className="form-group mt-1">
-                <label htmlFor="username" className="form-label">FullName<span className="text-danger">*</span></label>
-                <input type="text"  className="form-control" name='fullname' />
-            </div>
+      <div className="apply-form p-3">
+        <h1 className="fs-4 mb-3 fw-bold">Apply For Free Counselling</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group mt-1">
+            <label htmlFor="fullname" className="form-label">Full Name<span className="text-danger">*</span></label>
+            <input 
+              type="text" 
+              className="form-control" 
+              name='fullname' 
+              value={formData.fullname} 
+              onChange={handleChange} 
+              required 
+            />
+          </div>
 
-            <div className="form-group mt-1">
-                <label htmlFor="username" className="form-label">Email<span className="text-danger">*</span></label>
-                <input type="text"  className="form-control" name='email' />
-            </div>
+          <div className="form-group mt-1">
+            <label htmlFor="email" className="form-label">Email<span className="text-danger">*</span></label>
+            <input 
+              type="email" 
+              className="form-control" 
+              name='email' 
+              value={formData.email} 
+              onChange={handleChange} 
+              required 
+            />
+          </div>
 
-            <div className="form-group mt-1">
-                <label htmlFor="username" className="form-label">Phone Number<span className="text-danger">*</span></label>
-                <input type="text"  className="form-control" name='phonenumber' />
-            </div>
+          <div className="form-group mt-1">
+            <label htmlFor="phonenumber" className="form-label">Phone Number<span className="text-danger">*</span></label>
+            <input 
+              type="text" 
+              className="form-control" 
+              name='phonenumber' 
+              value={formData.phonenumber} 
+              onChange={handleChange} 
+              required 
+            />
+          </div>
 
-            <div className="form-group mt-1">
-                <label htmlFor="username" className="form-label">Work Experience<span className="text-danger">*</span></label>
-               <select name="experience" id="" className="form-select">
-                <option value="student">Student</option>
-                <option value="student">Fresher/0 years</option>
-                <option value="student"> 0-1 Year </option>
-                <option value="student">1-2 Years</option>
-               </select>
-            </div>
+          <div className="form-group mt-1">
+            <label htmlFor="experience" className="form-label">Work Experience<span className="text-danger">*</span></label>
+            <select 
+              name="experience" 
+              className="form-select" 
+              value={formData.experience} 
+              onChange={handleChange}
+            >
+              <option value="student">Student</option>
+              <option value="fresher">Fresher/0 years</option>
+              <option value="0-1">0-1 Year</option>
+              <option value="1-2">1-2 Years</option>
+            </select>
+          </div>
 
-            <div className="form-group mt-1">
-                <label htmlFor="username" className="form-label">Intrested Course<span className="text-danger">*</span></label>
-               <select name="experience" id="" className="form-select">
-                <option value="mern">Mern Fullstack</option>
-                <option value="java">Java Fullstack</option>
-                <option value="python">Python Fullstack</option>
-                <option value="others">Others</option>
-               </select>
-            </div>
-            <button className="main-btn mt-3 rounded w-100 fw-bold">APPLY</button>
+          <div className="form-group mt-1">
+            <label htmlFor="course" className="form-label">Interested Course<span className="text-danger">*</span></label>
+            <select 
+              name="course" 
+              className="form-select" 
+              value={formData.course} 
+              onChange={handleChange}
+            >
+              <option value="mern">MERN Fullstack</option>
+              <option value="java">Java Fullstack</option>
+              <option value="python">Python Fullstack</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+          
+          <button type="submit" className="main-btn mt-3 rounded w-100 fw-bold">APPLY</button>
+        </form>
+      </div>
 
-        </div>
+      {/* Modal */}
+      <Modal show={showModal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Success</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+
+            <h3 className="fs-4">Your application has been submitted successfully!</h3>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Fragment>
-  )
+  );
 }
 
-export default ApplyForm
+export default ApplyForm;

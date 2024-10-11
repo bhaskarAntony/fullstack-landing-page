@@ -67,7 +67,7 @@ function TestimonialSlider() {
             <div className="d-flex flex-column align-items-center justify-content-center w-100 text-center">
         <h1 className='fs-4'>Our Recently Placed Students</h1>
         <div className="v-line"></div>
-        <div className="icon mb-3"><i class="bi bi-building-check text-light"></i></div>
+        <div className="icon mb-3"><i class="bi bi-people text-light"></i></div>
         <h1 className="fs-3 fw-bold text-main">Testimonials</h1>
     </div>
         <div className="testimonial-slider py-5 mt-5">
