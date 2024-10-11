@@ -13,6 +13,9 @@ import Why from '../../components/why/Why'
 import Scroll from '../../components/scroll/Scroll'
 import { usePopup } from '../../context/PopupContext'
 import Footer from '../../components/footer/Footer'
+import Faqs from '../../components/faqs/Faqs'
+import Number from '../../components/numbers/Number'
+import Languages from '../../components/languages/Languages'
 
 function Home() {
   const { openPopup } = usePopup();
@@ -47,7 +50,10 @@ function Home() {
         <Program click={handleClick}/>
         <TestimonialSlider click={handleClick}/>
         <Why click={handleClick}/>
+        <Number/>
+        <Languages/>
         <Companies click={handleClick}/>
+        <Faqs/>
        
         {/* <Projects/> */}
         <Footer/>

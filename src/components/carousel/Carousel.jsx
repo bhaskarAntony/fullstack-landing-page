@@ -1,6 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import './style.css'
 import Hero from '../hero/Hero';
+import ApplyForm from '../form/ApplyForm';
 
 
 const FullstackData = {
@@ -48,8 +49,10 @@ const PythonstackData = {
 
 function HeroCarousel({click}) {
   return (
-  <section id="courses">
-      <Carousel>
+  <section id="courses" className='hero'>
+      <div className="row align-items-center">
+        <div className="col-md-8">
+        <Carousel>
       <Carousel.Item interval={5000}>
             <Hero data={FullstackData} click={click}/>
       </Carousel.Item>
@@ -63,6 +66,11 @@ function HeroCarousel({click}) {
       <Hero data={PythonstackData}  click={click}/>
       </Carousel.Item>
     </Carousel>
+        </div>
+        <div className="col-md-4">
+          <ApplyForm/>
+        </div>
+      </div>
   </section>
   );
 }
