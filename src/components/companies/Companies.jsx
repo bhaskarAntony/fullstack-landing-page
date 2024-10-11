@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 import Slider from 'react-slick/lib/slider';
 
-function Companies() {
+function Companies({click}) {
     const companyData = [
         'https://www.mphasis.com/content/dam/mphasis-com/global/logo/mphasis-logo.png.thumb.468.468.png',
         'https://static.litecart.net/storage/images/addons/403-razorpay-payment-gateway-1.jpg?_=1628171752',
@@ -96,6 +96,9 @@ function Companies() {
 
            
         </div>
+        <center>
+                <button className="main-btn mt-5 px-5" onClick={click}>Ask About Jobs</button>
+            </center>
     </section>
   )
 }

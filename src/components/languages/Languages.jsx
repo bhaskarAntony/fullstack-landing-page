@@ -105,7 +105,7 @@ function Languages() {
         </div>
         <div className="row mt-3">
             <div className="col-md-6 mb-3">
-                <div className="card p-4 bg-light h-100">
+                <div className="card p-4 bg-light h-100 border-0">
                     <h1 className="fs-4 mb-4 text-center">Programming Languages</h1>
                     <div className="row">
                         {
@@ -122,7 +122,7 @@ function Languages() {
                 </div>
             </div>
             <div className="col-md-6 mb-3">
-            <div className="card p-4 bg-light h-100">
+            <div className="card p-4 bg-light h-100 border-0">
                 <h4 className="fs-4 mb-4 text-center">Additional Tools</h4>
                     <div className="row">
                         {

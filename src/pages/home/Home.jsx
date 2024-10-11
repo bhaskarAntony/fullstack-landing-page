@@ -52,8 +52,12 @@ function Home() {
         <Why click={handleClick}/>
         <Number/>
         <Languages/>
+        <section className="container-fluid p-3 p-md-5 text-center bg-main">
+          <h1 className='text-white fs-2 fw-bold my-4'>At <u className='text-warning'>Be Practical</u> Tech Solutions “<span className="text-warning">We are the creators of coding legends</span>”</h1>
+          <button className="btn btn-light px-5 rounded-1 p-3 fs-5 fw-bold text-main" onClick={handleClick}>Ask More Doubts</button>
+        </section>
         <Companies click={handleClick}/>
-        <Faqs/>
+        <Faqs click={handleClick}/>
        
         {/* <Projects/> */}
         <Footer/>

@@ -25,12 +25,10 @@ export const PopupProvider = ({ children }) => {
     return (
         <PopupContext.Provider value={{ openPopup }}>
             {children}
-            <Modal show={show} onHide={closePopup}>
+            <Modal show={show} onHide={closePopup} centered>
                 <Modal.Header closeButton>
-                   
                 </Modal.Header>
                 <Modal.Body className='p-0'><ApplyForm/></Modal.Body>
-              
             </Modal>
         </PopupContext.Provider>
     );

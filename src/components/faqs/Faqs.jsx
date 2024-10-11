@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css'
-function Faqs() {
+function Faqs({click}) {
     const data = [
         {
             question: 'How long does it take to learn full stack programming?',
@@ -62,6 +62,10 @@ function Faqs() {
             </div>
             </div>
            </div>
+
+           <center>
+                <button className="main-btn mt-5 px-5" onClick={click}>Still have you Doubt?</button>
+            </center>
         </div>
     );
 }

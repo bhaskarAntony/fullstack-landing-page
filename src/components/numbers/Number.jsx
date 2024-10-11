@@ -13,7 +13,7 @@ function Number() {
             title:'Flexible Courses'
         },
         {
-            count:'1500+',
+            count:'1.5K+',
             title:'Successfull Students'
         },
         {
@@ -28,7 +28,7 @@ function Number() {
             {
                 data.map((item, index)=>(
                     <div className="col-md-3 count-container d-flex align-items-center justify-content-center">
-                        <div className="count-card p-2 mb-5">
+                        <div className={` p-3 mb-5 ${index%2==0?'card-solid':'count-card'}`}>
                             <h1 className="fs-2 text-main">{item.count}</h1>
                             <p className="fs-6">{item.title}</p>
                         </div>

@@ -67,7 +67,7 @@ function HeroCarousel({click}) {
       </Carousel.Item>
     </Carousel>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 p-4">
           <ApplyForm/>
         </div>
       </div>

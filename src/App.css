@@ -22,3 +22,6 @@
 *{
   color: #222;
 }
+.bg-main{
+  background: var(--primary-color) !important;
+}
