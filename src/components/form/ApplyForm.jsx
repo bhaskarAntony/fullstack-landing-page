@@ -23,7 +23,7 @@ function ApplyForm() {
     e.preventDefault();
     console.log("Submitting form with data:", formData); // Log the form data
     try {
-      const response = await axios.post('http://localhost:5000/api/new/lead', formData);
+      const response = await axios.post('https://fullstack-landing-page-backend.onrender.com/api/new/lead', formData);
       console.log('Response:', response.data);
       setShowModal(true);
     } catch (error) {
@@ -110,19 +110,14 @@ function ApplyForm() {
       </div>
 
       {/* Modal */}
-      <Modal show={showModal} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Success</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+      <Modal show={showModal} onHide={handleClose} centered>
+        
+        <Modal.Body className='text-center'>
+            <img src="https://i.pinimg.com/originals/48/a2/93/48a293976e2c10478e2eebf754ee8d25.gif" alt="" className="w-100" />
 
-            <h3 className="fs-4">Your application has been submitted successfully!</h3>
+            <h3 className="fs-4 mt-3">Your application has been submitted successfully!</h3>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
+      
       </Modal>
     </Fragment>
   );
