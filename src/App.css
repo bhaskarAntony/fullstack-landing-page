@@ -25,3 +25,47 @@
 .bg-main{
   background: var(--primary-color) !important;
 }
+
+.whatsapp{
+  position: fixed;
+  bottom: 10px;
+  width: 60px;
+  left: 10px;
+  z-index: 1300;
+}
+
+.call-icon{
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1300;
+  /* animation: anim 1s linear infinite alternate; */
+  /* background-color: #161d6fdd; */
+}
+.call-icon img{
+  width: 60px;
+  
+}
+
+.call-icon::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2195f37e;
+  border-radius: 100px;
+  z-index: -1;
+  animation-delay: 0.5s;
+  animation: anim 1s linear infinite alternate;
+  
+}
+
+@keyframes anim{
+  from{
+    transform: scale(0.9);
+  }
+  to{
+    transform: scale(1.4);
+  }
+}

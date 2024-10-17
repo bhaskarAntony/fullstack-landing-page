@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import axios from 'axios';
 import { Modal, Button } from 'react-bootstrap';
 import './style.css';
+import Loading from '../loading/Loading';
 
 function ApplyForm() {
   const [formData, setFormData] = useState({
@@ -11,7 +12,8 @@ function ApplyForm() {
     experience: 'student',
     course: 'mern'
   });
-
+  const [isLoading, setIsLoading] = useState(false);
+ 
   const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
@@ -21,16 +23,23 @@ function ApplyForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     console.log("Submitting form with data:", formData); // Log the form data
     try {
       const response = await axios.post('https://fullstack-landing-page-backend.onrender.com/api/new/lead', formData);
       console.log('Response:', response.data);
+      setIsLoading(false)
       setShowModal(true);
     } catch (error) {
+      setIsLoading(false)
       console.error('Error submitting form:', error); // Log the error for better debugging
     }
   };
   
+  if(isLoading){
+    return <Loading/>
+  }
+
 
   const handleClose = () => setShowModal(false);
 
