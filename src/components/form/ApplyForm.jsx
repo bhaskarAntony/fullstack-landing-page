@@ -20,6 +20,14 @@ function ApplyForm() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  const handleWhatsappShare = () => {
+    const messageContent = `
+          I am intrested to learn *fullstack development*, can you help me with that.
+          Thank you.
+    `
+    const encodedMessage = encodeURIComponent(messageContent);
+    window.open(`https://wa.me/+919242079119/?text=${encodedMessage}`, '_blank');
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,8 +36,9 @@ function ApplyForm() {
     try {
       const response = await axios.post('https://fullstack-landing-page-backend.onrender.com/api/new/lead', formData);
       console.log('Response:', response.data);
-      setIsLoading(false)
+      setIsLoading(false);
       setShowModal(true);
+      handleWhatsappShare();
     } catch (error) {
       setIsLoading(false)
       console.error('Error submitting form:', error); // Log the error for better debugging
