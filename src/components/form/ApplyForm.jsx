@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Modal, Button } from 'react-bootstrap';
 import './style.css';
 import Loading from '../loading/Loading';
+import leadsquared from './api';
 
 function ApplyForm() {
   const [formData, setFormData] = useState({
@@ -34,11 +35,11 @@ function ApplyForm() {
     setIsLoading(true)
     console.log("Submitting form with data:", formData); // Log the form data
     try {
-      const response = await axios.post('https://fullstack-landing-page-backend.onrender.com/api/new/lead', formData);
-      console.log('Response:', response.data);
-      setIsLoading(false);
-      setShowModal(true);
-      handleWhatsappShare();
+      const response = await axios.post('https://fullstack-backend.be-practical.com/api/new/lead', formData);
+        console.log('Response:', response.data);
+        setIsLoading(false);
+        setShowModal(true);
+        handleWhatsappShare();
     } catch (error) {
       setIsLoading(false)
       console.error('Error submitting form:', error); // Log the error for better debugging
